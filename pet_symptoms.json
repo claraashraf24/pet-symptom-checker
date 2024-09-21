@@ -1,0 +1,175 @@
+{
+  "dog": {
+    "common_symptoms": [
+      "vomiting",
+      "scratching",
+      "coughing",
+      "diarrhea",
+      "lethargy",
+      "urinating frequently"
+    ],
+    "symptoms": {
+      "vomiting": {
+        "conditions": [
+          "gastroenteritis",
+          "food allergy",
+          "pancreatitis",
+          "intoxication"
+        ],
+        "severity": "moderate",
+        "action": "Monitor for 24 hours, visit a vet if persistent."
+      },
+      "scratching": {
+        "conditions": ["fleas", "skin infection", "allergies", "hot spots"],
+        "severity": "low",
+        "action": "Check for fleas and apply treatment."
+      },
+      "coughing": {
+        "conditions": ["kennel cough", "heart disease", "tracheal collapse"],
+        "severity": "moderate",
+        "action": "Monitor closely and visit a vet if worsens."
+      },
+      "diarrhea": {
+        "conditions": [
+          "gastroenteritis",
+          "dietary indiscretion",
+          "intestinal parasites"
+        ],
+        "severity": "low to moderate",
+        "action": "Monitor for dehydration; consult a vet if persists."
+      },
+      "lethargy": {
+        "conditions": ["anemia", "heart disease", "hypothyroidism"],
+        "severity": "high",
+        "action": "Visit a vet immediately if persistent."
+      },
+      "urinating frequently": {
+        "conditions": ["urinary tract infection", "diabetes", "kidney disease"],
+        "severity": "moderate to high",
+        "action": "Visit a vet for urinalysis."
+      }
+    }
+  },
+  "cat": {
+    "common_symptoms": [
+      "vomiting",
+      "scratching",
+      "coughing",
+      "diarrhea",
+      "lethargy",
+      "excessive thirst"
+    ],
+    "symptoms": {
+      "vomiting": {
+        "conditions": ["hairballs", "kidney disease", "hyperthyroidism"],
+        "severity": "moderate",
+        "action": "Monitor for 48 hours, visit vet if worsens."
+      },
+      "scratching": {
+        "conditions": ["fleas", "allergies", "ear mites", "fungal infection"],
+        "severity": "low",
+        "action": "Check for fleas and apply treatment."
+      },
+      "coughing": {
+        "conditions": ["asthma", "respiratory infection", "heartworm"],
+        "severity": "moderate",
+        "action": "Monitor closely and visit a vet if worsens."
+      },
+      "diarrhea": {
+        "conditions": [
+          "intestinal parasites",
+          "dietary changes",
+          "inflammatory bowel disease"
+        ],
+        "severity": "low to moderate",
+        "action": "Monitor for dehydration; consult a vet if persists."
+      },
+      "lethargy": {
+        "conditions": ["anemia", "diabetes", "hyperthyroidism"],
+        "severity": "high",
+        "action": "Visit a vet immediately if persistent."
+      },
+      "excessive thirst": {
+        "conditions": ["diabetes", "kidney disease", "hyperthyroidism"],
+        "severity": "moderate to high",
+        "action": "Visit a vet for blood tests."
+      }
+    }
+  },
+  "bird": {
+    "common_symptoms": [
+      "fluffed feathers",
+      "excessive screaming",
+      "lethargy",
+      "changes in droppings",
+      "difficulty breathing"
+    ],
+    "symptoms": {
+      "fluffed feathers": {
+        "conditions": ["cold stress", "illness", "dehydration"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "excessive screaming": {
+        "conditions": ["boredom", "illness", "mating behavior"],
+        "severity": "low to moderate",
+        "action": "Evaluate environment and health."
+      },
+      "lethargy": {
+        "conditions": ["illness", "dehydration", "nutritional deficiency"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "changes in droppings": {
+        "conditions": ["dietary changes", "illness", "infection"],
+        "severity": "moderate",
+        "action": "Monitor and consult a vet if persists."
+      },
+      "difficulty breathing": {
+        "conditions": ["respiratory infection", "air sac rupture"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      }
+    }
+  },
+  "rabbit": {
+    "common_symptoms": [
+      "not eating",
+      "diarrhea",
+      "scratching",
+      "lethargy",
+      "nose discharge"
+    ],
+    "symptoms": {
+      "not eating": {
+        "conditions": ["gut stasis", "dental issues", "illness"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "diarrhea": {
+        "conditions": [
+          "dietary indiscretion",
+          "intestinal parasites",
+          "bacterial infection"
+        ],
+        "severity": "moderate",
+        "action": "Monitor for dehydration; consult a vet if persists."
+      },
+      "scratching": {
+        "conditions": ["fleas", "ear mites", "fungal infection"],
+        "severity": "low",
+        "action": "Check for parasites and apply treatment."
+      },
+      "lethargy": {
+        "conditions": ["anemia", "dehydration", "pain"],
+        "severity": "high",
+        "action": "Visit a vet immediately if persistent."
+      },
+      "nose discharge": {
+        "conditions": ["respiratory infection", "allergies", "dental issues"],
+        "severity": "moderate",
+        "action": "Consult a vet for evaluation."
+      }
+    }
+  }
+}
