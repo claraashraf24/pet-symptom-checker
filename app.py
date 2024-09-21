@@ -6,31 +6,33 @@ from symptom_checker import *
 
 app = Flask(__name__)
 
-def load_data():
-    with open('pet_symptoms.json', 'r') as file:
-        return json.load(file)
-
 @app.route('/')
 def index():
     data = load_data()
     return render_template('index.html', data=data)
 
+
+def load_data():
+    with open('pet_symptoms.json', 'r') as file:
+        return json.load(file)
+
 @app.route('/check', methods=['POST'])
 def check_symptoms():
     data = load_data()
     pet_type = request.json.get('pet_type').lower()
-    symptom = request.json.get('symptom').lower()
-    common_symptoms = data.get(pet_type, {}).get("common_symptoms", [])
+    symptoms = request.json.get('symptoms', [])  # Get the array of symptoms
+    all_conditions = []
+    severity = None
+    action = None
     
-    # Get conditions based on the selected symptom
-    if symptom in data[pet_type]["symptoms"]:
-        conditions_info = data[pet_type]["symptoms"][symptom]
-        conditions = conditions_info["conditions"]
-        severity = conditions_info["severity"]
-        action = conditions_info["action"]
-        return jsonify({'conditions': conditions, 'severity': severity, 'action': action})
-    else:
-        return jsonify({'error': 'No data available for the given symptom.'})
+    for symptom in symptoms:
+        if symptom in data[pet_type]["symptoms"]:
+            conditions_info = data[pet_type]["symptoms"][symptom]
+            all_conditions.extend(conditions_info["conditions"])
+            severity = conditions_info["severity"]  # You might want to handle multiple severities
+            action = conditions_info["action"]  # Similar handling for actions
+
+    return jsonify({'conditions': all_conditions, 'severity': severity, 'action': action})
 
 
 if __name__ == "__main__":

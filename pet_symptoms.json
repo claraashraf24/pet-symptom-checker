@@ -6,7 +6,11 @@
       "coughing",
       "diarrhea",
       "lethargy",
-      "urinating frequently"
+      "urinating frequently",
+      "excessive barking",
+      "bad breath",
+      "changes in urination",
+      "weight loss"
     ],
     "symptoms": {
       "vomiting": {
@@ -47,6 +51,26 @@
         "conditions": ["urinary tract infection", "diabetes", "kidney disease"],
         "severity": "moderate to high",
         "action": "Visit a vet for urinalysis."
+      },
+      "excessive barking": {
+        "conditions": ["separation anxiety", "boredom", "territorial behavior"],
+        "severity": "moderate",
+        "action": "Evaluate environment and training"
+      },
+      "bad breath": {
+        "conditions": ["dental disease", "gum disease"],
+        "severity": "moderate",
+        "action": "schedule a dental check-up"
+      },
+      "changes in urination": {
+        "conditions": ["diabetes", "urinary tract infection"],
+        "severity": "moderate to high",
+        "action": "Visit a vet for urinalysis."
+      },
+      "weight loss": {
+        "conditions": ["hyperthyroidism", "gastrointestinal issues"],
+        "severity": "high",
+        "action": "consult a vet immediately"
       }
     }
   },
@@ -57,7 +81,11 @@
       "coughing",
       "diarrhea",
       "lethargy",
-      "excessive thirst"
+      "excessive thirst",
+      "hiding",
+      "purring excessively",
+      "overgrooming",
+      "vomiting hairballs"
     ],
     "symptoms": {
       "vomiting": {
@@ -92,7 +120,27 @@
       "excessive thirst": {
         "conditions": ["diabetes", "kidney disease", "hyperthyroidism"],
         "severity": "moderate to high",
-        "action": "Visit a vet for blood tests."
+        "action": "visit a vet for blood tests."
+      },
+      "hiding": {
+        "conditions": ["stess", "illness", "pain"],
+        "severity": "high",
+        "action": "monitor closely; consult a vet if persists."
+      },
+      "purring excessively": {
+        "conditions": ["pain", "stress", "contentment"],
+        "severity": "low to moderate",
+        "action": "observe for other symptoms"
+      },
+      "overgrooming": {
+        "conditions": ["allergies", "stress", "skin infections"],
+        "severity": "moderate",
+        "action": "consult a vet for evaluation"
+      },
+      "vomiting hairballs": {
+        "conditions": ["Normal but can indicate dietary issues"],
+        "severity": "moderate",
+        "action": "ensure proper grooming and diet"
       }
     }
   },
@@ -102,7 +150,9 @@
       "excessive screaming",
       "lethargy",
       "changes in droppings",
-      "difficulty breathing"
+      "difficulty breathing",
+      "loss of voice",
+      "biting"
     ],
     "symptoms": {
       "fluffed feathers": {
@@ -129,6 +179,16 @@
         "conditions": ["respiratory infection", "air sac rupture"],
         "severity": "high",
         "action": "Visit a vet immediately."
+      },
+      "loss of voice": {
+        "conditions": ["respiratory issues", "stress"],
+        "severity": "moderate",
+        "action": "Consult a vet for evaluation"
+      },
+      "biting": {
+        "conditions": ["fear", "stress", "territorial behavior"],
+        "severity": "low to moderate",
+        "action": "Evaluate environment and handling"
       }
     }
   },
@@ -138,7 +198,11 @@
       "diarrhea",
       "scratching",
       "lethargy",
-      "nose discharge"
+      "nose discharge",
+      "teeth grinding",
+      "changes in activity level",
+      "wetness around nose",
+      "straining to urinate"
     ],
     "symptoms": {
       "not eating": {
@@ -169,6 +233,275 @@
         "conditions": ["respiratory infection", "allergies", "dental issues"],
         "severity": "moderate",
         "action": "Consult a vet for evaluation."
+      },
+      "teeth grinding": {
+        "conditions": ["pain", "discomfort"],
+        "severity": "moderate to high",
+        "action": "Visit a vet immediately"
+      },
+      "changes in activity level": {
+        "conditions": ["illness", "pain"],
+        "severity": "moderate to high",
+        "action": " Monitor closely and consult a vet if persists"
+      },
+      "wetness around nose": {
+        "conditions": ["respiratory infection", "dental issues"],
+        "severity": "moderate",
+        "action": " Consult a vet for evaluation"
+      },
+      "straining to urinate": {
+        "conditions": ["urinary tract infection", "bladder stones"],
+        "severity": "high",
+        "action": "Visit a vet immediately"
+      }
+    }
+  },
+  "hamster": {
+    "common_symptoms": [
+      "not eating",
+      "lethargy",
+      "scratching",
+      "wet tail",
+      "bald spots",
+      "excessive hiding",
+      "difficulty breathing",
+      "diarrhea"
+    ],
+    "symptoms": {
+      "not eating": {
+        "conditions": ["dental issues", "illness", "stress"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "lethargy": {
+        "conditions": ["dehydration", "illness", "pain"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "scratching": {
+        "conditions": ["mites", "dry skin"],
+        "severity": "low",
+        "action": "Check for parasites and apply treatment."
+      },
+      "wet tail": {
+        "conditions": ["intestinal infection", "stress"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "bald spots": {
+        "conditions": ["allergies", "hormonal issues"],
+        "severity": "moderate",
+        "action": "Consult a vet for evaluation"
+      },
+      "excessive hiding": {
+        "conditions": ["stress", "illness"],
+        "severity": "moderate",
+        "action": "Monitor closely"
+      },
+      "difficulty breathing": {
+        "conditions": ["respiratory infection", "allergies"],
+        "severity": "high",
+        "action": "Visit a vet immediately"
+      },
+      "diarrhea": {
+        "conditions": ["dietary indiscretion", "infections"],
+        "severity": "moderate",
+        "action": " Monitor for dehydration; consult a vet if persists"
+      }
+    }
+  },
+  "ferret": {
+    "common_symptoms": [
+      "lethargy",
+      "loss of appetite",
+      "scratching",
+      "vomiting",
+      "changes in behavior",
+      "bad smell"
+    ],
+    "symptoms": {
+      "lethargy": {
+        "conditions": ["anemia", "illness", "dehydration"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "loss of appetite": {
+        "conditions": ["intestinal blockage", "illness", "dental problems"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "scratching": {
+        "conditions": ["fleas", "mites", "allergies"],
+        "severity": "low to moderate",
+        "action": "Check for parasites and apply treatment."
+      },
+      "vomiting": {
+        "conditions": ["gastroenteritis", "food intolerance", "foreign body"],
+        "severity": "moderate",
+        "action": "Monitor closely; visit a vet if persists."
+      },
+      "changes in behavior": {
+        "conditions": ["stress", "illness"],
+        "severity": "moderate",
+        "action": "monitor closely; consult a vet if persists."
+      },
+      "bad smell": {
+        "conditions": ["skin infection", "dental issues"],
+        "severity": "moderate",
+        "action": "consult a vet for evaluation"
+      }
+    }
+  },
+  "guinea pig": {
+    "common_symptoms": [
+      "lethargy",
+      "loss of appetite",
+      "coughing",
+      "diarrhea",
+      "squeaking excessively",
+      "wetness around eyes",
+      "changes in coat texture",
+      "lumps or pumps"
+    ],
+    "symptoms": {
+      "lethargy": {
+        "conditions": ["hypovitaminosis C", "illness", "dehydration"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "loss of appetite": {
+        "conditions": ["dental issues", "digestive problems", "illness"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "coughing": {
+        "conditions": ["respiratory infection", "allergies", "foreign body"],
+        "severity": "moderate",
+        "action": "Monitor closely; visit a vet if persists."
+      },
+      "diarrhea": {
+        "conditions": ["dietary changes", "bacterial infection", "parasites"],
+        "severity": "moderate",
+        "action": "Monitor for dehydration; consult a vet if persists."
+      },
+      "squeaking excessively": {
+        "conditions": ["stress", "discomfort", "excitement"],
+        "severity": "low to moderate",
+        "action": "evaluate environment"
+      },
+      "wetness around eyes": {
+        "conditions": ["respiratory infection", "dental issues"],
+        "severity": "moderate",
+        "action": "consult a vet for evaluation"
+      },
+      "changes in coat texture": {
+        "conditions": ["nutritional deficiencies", "illness"],
+        "severity": "moderate",
+        "action": "consult a vet for evaluation"
+      },
+      "lumps or pumps": {
+        "conditions": ["tumors", "cysts"],
+        "severity": "high",
+        "action": "Visit a vet immediately"
+      }
+    }
+  },
+  "canary": {
+    "common_symptoms": [
+      "fluffed feathers",
+      "coughing",
+      "lethargy",
+      "changes in singing",
+      "plucking feathers",
+      "changes in singing pattern",
+      "swollen feet",
+      "change in appetite"
+    ],
+    "symptoms": {
+      "fluffed feathers": {
+        "conditions": ["cold stress", "illness"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "coughing": {
+        "conditions": ["respiratory infection", "allergies"],
+        "severity": "moderate",
+        "action": "Monitor closely and visit a vet if worsens."
+      },
+      "lethargy": {
+        "conditions": ["illness", "dehydration"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "changes in singing": {
+        "conditions": ["stress", "illness"],
+        "severity": "low to moderate",
+        "action": "Monitor closely; consult a vet if persists."
+      },
+      "plucking feathers": {
+        "conditions": ["stress", "illness", "boredom"],
+        "severity": "moderate",
+        "action": "consult a vet for evaluation"
+      },
+      "changes in singing pattern": {
+        "conditions": ["stress", "illness"],
+        "severity": "low to moderate",
+        "action": "Monitor closely"
+      },
+      "swollen feet": {
+        "conditions": ["infection", "nutritional issues"],
+        "severity": "moderate",
+        "action": "consult a vet for evaluation"
+      },
+      "change in appetite": {
+        "conditions": ["illness", "stress"],
+        "severity": "moderate",
+        "action": "Monitor closely"
+      }
+    }
+  },
+  "turtle": {
+    "common_symptoms": [
+      "not eating",
+      "lethargy",
+      "shell problems",
+      "swimming difficulties"
+    ],
+    "symptoms": {
+      "not eating": {
+        "conditions": ["illness", "stress", "poor water quality"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "lethargy": {
+        "conditions": ["dehydration", "infection"],
+        "severity": "high",
+        "action": "Visit a vet immediately."
+      },
+      "shell problems": {
+        "conditions": ["shell rot", "poor diet"],
+        "severity": "moderate",
+        "action": "Consult a vet for evaluation."
+      },
+      "swimming difficulties": {
+        "conditions": ["respiratory infection", "buoyancy issues"],
+        "severity": "moderate",
+        "action": "Monitor closely and consult a vet if worsens."
+      },
+      "puffiness around eyes": {
+        "conditions": ["respiratory infection", "dehydration"],
+        "severity": "moderate to high",
+        "action": "consult a vet for evaluation"
+      },
+      "shell discoloration": {
+        "conditions": ["poor diet", "infection"],
+        "severity": "moderate",
+        "action": "consult a vet for evaluation"
+      },
+      "refusal to eat": {
+        "conditions": ["stress", "illness"],
+        "severity": "high",
+        "action": "Visit a vet immediately"
       }
     }
   }
