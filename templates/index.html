@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Symptom Checker</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Pet Symptom Checker</h1>
+    <form id="symptomForm">
+      <label for="pet_type">Pet Type:</label>
+      <select name="pet_type" id="pet_type" onchange="updateSymptoms()">
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="bird">Bird</option>
+        <option value="rabbit">Rabbit</option>
+      </select>
+      <br /><br />
+
+      <label for="symptom">Symptom:</label>
+      <select name="symptom" id="symptom" required>
+        <option value="">Select a symptom</option>
+      </select>
+
+      <button type="submit">Check</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        const symptomsData = {{ data | tojson }};  // Pass JSON data to JavaScript
+        console.log(symptomsData);  // Check if data is being passed correctly
+
+
+      function updateSymptoms() {
+          const petType = document.getElementById('pet_type').value;
+          const symptomSelect = document.getElementById('symptom');
+          symptomSelect.innerHTML = '<option value="">Select a symptom</option>';  // Reset the dropdown
+
+          if (symptomsData[petType]) {
+              symptomsData[petType].common_symptoms.forEach(symptom => {
+                  const option = document.createElement('option');
+                  option.value = symptom;
+                  option.textContent = symptom;
+                  symptomSelect.appendChild(option);
+              });
+          }
+      }
+
+      document.getElementById('symptomForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const petType = document.getElementById('pet_type').value;
+          const symptom = document.getElementById('symptom').value;
+
+          fetch('/check', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ pet_type: petType, symptom: symptom }),
+          })
+          .then(response => response.json())
+          .then(data => {
+              let resultDiv = document.getElementById('result');
+              resultDiv.innerHTML = '';
+              if (data.error) {
+                  resultDiv.innerHTML = `<p>${data.error}</p>`;
+              } else {
+                  resultDiv.innerHTML = `<p>Possible conditions: ${data.conditions.join(', ')}</p>
+                                        <p>Severity: ${data.severity}</p>
+                                        <p>Recommended action: ${data.action}</p>`;
+              }
+          });
+      });
+
+      // Initialize symptoms on page load
+      window.onload = updateSymptoms;
+    </script>
+  </body>
+</html>
